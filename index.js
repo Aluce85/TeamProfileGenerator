@@ -61,7 +61,7 @@ function generateManager() {
     ]).then(response => {
         let manager = new manager(response.name, response.id, response.email, response.officeNumber)
 
-        Employees.push(manager)
+        employees.push(manager)
         generateEmployee()
     })
 }
@@ -91,7 +91,7 @@ function generateIntern() {
     ]).then(response => {
         let intern = new intern(response.name, response.id, response.email, response.school)
 
-        Employees.push(intern)
+        employees.push(intern)
         generateEmployee()
     })
 }
@@ -121,7 +121,7 @@ function generateEngineer() {
     ]).then(response => {
         let engineer = new engineer(response.name, response.id, response.email, response.github)
 
-        Employees.push(engineer)
+        employees.push(engineer)
         generateEmployee()
     })
 }
