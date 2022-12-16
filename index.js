@@ -1,0 +1,10 @@
+const inquirer = require("inquirer")
+const fs = require("fs")
+const manager = require("./lib/manager.js")
+const engineer = require(".lib/employee.js")
+const intern = require("./lib/intern")
+const employees = []
+const path = require("path")
+const OUTPUT_DIR = path.resolve(__dirname, "output")
+const outputPath = path.join(OUTPUT_DIR,"generatedHTML.html")
+const render = require("./src/renderHTML")
