@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const manager = require("./lib/manager.js");
-const engineer = require(".lib/employee.js");
-const intern = require("./lib/intern");
+const manager = require("./library/manager.js");
+const engineer = require("./library/employee.js");
+const intern = require("./library/intern");
 const employees = [];
 const path = require("path");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
