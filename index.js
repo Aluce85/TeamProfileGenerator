@@ -35,3 +35,94 @@ function generateEmployee() {
       }
     });
 }
+
+function generateManager() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is your name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your employee ID number?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
+        },
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: 'What is your office location number?',
+        },
+    ]).then(response => {
+        let manager = new manager(response.name, response.id, response.email, response.officeNumber)
+
+        Employees.push(manager)
+        generateEmployee()
+    })
+}
+
+function generateIntern() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is your name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your employee ID number?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What college or university are you attending?',
+        },
+    ]).then(response => {
+        let intern = new intern(response.name, response.id, response.email, response.school)
+
+        Employees.push(intern)
+        generateEmployee()
+    })
+}
+
+function generateEngineer() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is your name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your employee ID number?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is your GitHub Username?',
+        },
+    ]).then(response => {
+        let engineer = new engineer(response.name, response.id, response.email, response.github)
+
+        Employees.push(engineer)
+        generateEmployee()
+    })
+}
+
